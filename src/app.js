@@ -55,7 +55,7 @@ app.delete("/repositories/:id", validateUuid, (request, response) => {
   if (index < 0) {
     return response.status(400).json({ error: 'Repository not found' });
   }
-  repostoirs = repositories.splice(index, 1);
+  repositories.splice(index, 1);
   return response.status(204).send();
 });
 
